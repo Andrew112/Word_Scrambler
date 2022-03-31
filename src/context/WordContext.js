@@ -16,7 +16,7 @@ export const WordContextProvider = ({ children }) => {
     const [scrambledPhrase, setScrambledPhrase] = useState('');
     const [counter, setCounter] = useState(1);
     const [correctAns, setCorrectAns] = useState(0);
-
+         //function for loading word data 
     useEffect(() => {
         const loadPhrase = async () => {
             const { data } = await axios.get(`${API_URL}/${counter}`);
